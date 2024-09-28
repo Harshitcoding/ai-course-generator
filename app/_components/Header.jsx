@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
 const Header = () => {
   return (
@@ -14,7 +15,9 @@ const Header = () => {
         <span className="ml-2 font-bold text-primary">AlphaWave</span> {/* Added margin-left for spacing */}
     </div>
 
+    <Link href="/dashboard">
     <Button>Get Started</Button>
+    </Link>
 </div>
   )
 }
