@@ -10,12 +10,12 @@ import { UserCourseListContext } from "@/app/_context/UserCourseListContext"
 
 const SideBar = () => {
 
-    const {userCourseList,setUserCourseList} = useContext(UserCourseListContext)
+    
 
     const Menu = [
         { id: 1, name: "Home", icon: <HiOutlineHome />, path: '/dashboard' },
         { id: 2, name: "Explore", icon: <HiOutlineSquare3Stack3D />, path: '/dashboard/explore' },
-        { id: 3, name: "Upgrade", icon: <HiOutlineShieldCheck />, path: '/dashboard/upgrade' },
+        
         
     ];
 
@@ -46,11 +46,7 @@ const SideBar = () => {
                     </li>
                 ))}
             </ul>
-            <div className="absolute bottom-10 w-[80%]">
-                <Progress value={(userCourseList?.length/7)*100}/>
-                <h2 className="text-sm my-2">{userCourseList?.length} out of 7 course created</h2>
-                <h2 className="text-xs text-gray-500">Upgrade your plan for unlimited course generate</h2>
-            </div>
+            
         </div>
     );
 }
